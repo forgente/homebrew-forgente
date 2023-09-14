@@ -1,18 +1,12 @@
 #!/bin/sh
 
-binaries="tea act_runner gitea"
+binaries="act_runner"
 for bin in ${binaries};do
 	file="${bin}.rb"
 	case "$bin" in
-		tea)
-			git_url="https://gitea.com/gitea/tea"
-			supported_os="linux-386 linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
 		act_runner)
 			git_url="https://gitea.com/gitea/act_runner"
 			supported_os="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
-		gitea)
-			git_url="https://github.com/go-gitea/gitea"
-			supported_os="linux-386 linux-amd64 linux-arm64 darwin-10.12-amd64 darwin-10.12-arm64";;
 		*)
 			>&2 echo "Error: unrecognized binary ($bin)"
 			exit 1;;

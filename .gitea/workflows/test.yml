@@ -24,10 +24,6 @@ jobs:
       - name: test install
         run: |
           brew tap gitea/gitea "${PWD}"
-          brew install gitea/gitea/tea
-          tea --version
-          brew install gitea/gitea/gitea
-          gitea --version
           brew install gitea/gitea/act_runner
           act_runner --version
   # TODO: test for arm

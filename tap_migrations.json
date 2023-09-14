@@ -1,3 +1,4 @@
 {
+  "gitea": "homebrew/core",
   "tea": "homebrew/core"
 }
