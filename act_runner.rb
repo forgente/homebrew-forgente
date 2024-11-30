@@ -3,7 +3,7 @@ require_relative './utils/macos_codesign.rb'
 class ActRunner < Formula
   desc "A runner for Gitea based on act"
   homepage "https://gitea.com/gitea/act_runner"
-  version "0.2.8"
+  version "0.2.11"
   license "MIT"
 
   os = OS.mac? ? "darwin" : "linux"
@@ -22,10 +22,10 @@ class ActRunner < Formula
   depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
-             when "linux-amd64" then "84dc6c2492ceaf6af1f9316db9081a7d816625a27d44717f4d6fbae676d02f2f"
-             when "linux-arm64" then "adc7f3eb76cb154b149dc2029a2452de8b81306b68928396549ab15359311e93" # binary
-             when "darwin-amd64" then "05ace1b9bc1738de641c808fb2a3588febea870a25475ec11ad8137fcec1bd46"
-             when "darwin-arm64" then "bba0dbe443f82770f27a77ecf110d48dd1edfa3e2bd3e985e85cceb0664a91e1"
+             when "linux-amd64" then "6099bccc2876cb760f5443e88c8b2e1a52f226f485152fc6f711b3bb3f49501c"
+             when "linux-arm64" then "e155c3a476921b6636947af90c7119758c9332c5b82c4a15ed86e17c4d7204e7" # binary
+             when "darwin-amd64" then "df885b72c844378aa33369738d35b147c8ac6b31d6f2a6d303395208d2e9e41b"
+             when "darwin-arm64" then "b4169b914d9ff8c2014289498872389310c79ecf73d41ac132ae4820955240a4"
              else
                raise "act_runner: Unsupported system #{os}-#{arch}"
              end
