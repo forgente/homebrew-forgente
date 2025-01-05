@@ -6,7 +6,7 @@ class Changelog < Formula
   version "main"
   license "MIT"
 
-  os = OS.mac? ? "darwin-10.12" : "linux"
+  os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
          when :i386 then "386"
          when :x86_64 then "amd64"
@@ -19,7 +19,7 @@ class Changelog < Formula
   @@url = "https://dl.gitea.com/changelog-tool/#{version}/#{@@filename}"
   @@using = :nounzip
 
-  if os == "darwin-10.12" || arch == "amd64"
+  if os == "darwin" || arch == "amd64"
     @@url += ".xz"
     @@using = nil
     depends_on "xz"
