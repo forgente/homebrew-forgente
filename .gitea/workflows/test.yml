@@ -20,7 +20,7 @@ jobs:
         run: |
           brew install node
           node --version
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: test install
         run: |
           brew tap gitea/gitea "${PWD}"
