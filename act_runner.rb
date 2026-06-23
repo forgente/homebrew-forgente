@@ -3,7 +3,7 @@ require_relative './utils/macos_codesign.rb'
 class ActRunner < Formula
   desc "A runner for Gitea based on act"
   homepage "https://gitea.com/gitea/act_runner"
-  version "0.3.0"
+  version "1.0.8"
   license "MIT"
 
   os = OS.mac? ? "darwin" : "linux"
