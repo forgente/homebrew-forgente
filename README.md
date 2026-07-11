@@ -1,23 +1,26 @@
-# Gitea: Homebrew
+# Forgente: Homebrew
 
 [![Join the chat at https://img.shields.io/discord/322538954119184384.svg](https://img.shields.io/discord/322538954119184384.svg)](https://discord.gg/NsatcWJ)
 
-Homebrew repository to install Gitea and tools on macOS.
+Homebrew repository to install Forgente and tools on macOS.
+Soft fork of [gitea/homebrew-gitea](https://gitea.com/gitea/homebrew-gitea).
 
 ## Prepare
 
 ```bash
-brew tap gitea/tap https://gitea.com/gitea/homebrew-gitea
+brew tap forgente/tap https://github.com/forgente/homebrew-forgente
 ```
 
 ## Install
 
-### gitea
+### forgente
 
 ```bash
-brew install gitea
-gitea -h
+brew install forgente
+forgente -h
 ```
+
+Use `brew install forgente-head` for the nightly build instead.
 
 ### tea
 

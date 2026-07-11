@@ -1,11 +1,16 @@
 #!/bin/sh
 
-binaries="act_runner"
+binaries="forgente act_runner"
 for bin in ${binaries};do
 	file="${bin}.rb"
 	case "$bin" in
+		forgente)
+			git_url="https://github.com/forgente/forgente"
+			dl_url="https://dl.forgente.com"
+			supported_os="linux-amd64 linux-arm64 linux-386 darwin-10.12-amd64 darwin-10.12-arm64";;
 		act_runner)
 			git_url="https://gitea.com/gitea/act_runner"
+			dl_url="https://dl.gitea.com"
 			supported_os="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
 		*)
 			>&2 echo "Error: unrecognized binary ($bin)"
@@ -15,7 +20,7 @@ for bin in ${binaries};do
 	version="${latest##*/v}"
 	echo "update ${bin} version: ${version}"
 
-	file_url="https://dl.gitea.com/${bin}/${version}"
+	file_url="${dl_url}/${bin}/${version}"
 	for os in ${supported_os}; do
 		sha256_file="${bin}-${version}-${os}.xz.sha256"
 		sha256=$(curl -sL "${file_url}/${sha256_file}" | awk '{print$1}')
