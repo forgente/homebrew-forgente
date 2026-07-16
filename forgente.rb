@@ -3,7 +3,7 @@ require_relative './utils/macos_codesign.rb'
 class Forgente < Formula
   desc "Forgente - A painless self-hosted Git service"
   homepage "https://github.com/forgente/forgente"
-  version "1.26.4-1"
+  version "1.27.0-1"
   license "MIT"
 
   os = OS.mac? ? "darwin-10.12" : "linux"
@@ -22,11 +22,11 @@ class Forgente < Formula
   depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
-             when "linux-amd64" then "dc1f5e6b3a11957343367c47c600d453a74796f88767b5fc2a30ae100621deab"
-             when "linux-arm64" then "c4659ad1666b0d9330395ceafcbede4867d1fb40a2eba0ab9d3569dcdf7a5e25"
-             when "linux-386" then "14fbf1cc34ddf9796a81c27f7d5f08f2d7f2aa40fa0a6bf16285c443ae5d3c7d"
-             when "darwin-10.12-amd64" then "b78a8486a4f91bb5a12994e7b76df80e7aa5b389498f501e8f09a8fda6818c49"
-             when "darwin-10.12-arm64" then "1cfdf9c9303fbd4fe5bcb49b9316737f0d0675d08750b1abd60a51a26395fd9d"
+             when "linux-amd64" then "74233f036fbafa97173fe96fd899e83cebdad21096ff8c907d61871a3643bad7"
+             when "linux-arm64" then "27a0cc64fb2957dc23166aec1e728fd848112f9d3de476c6bd3362c72c7b13d9"
+             when "linux-386" then "ad3b9cc429f37188c8a5290255ea1fd145240b4e148d9d0f7c3b055c3af10c9f"
+             when "darwin-10.12-amd64" then "693555eb9ba4168f327db8df91d3edb563fd80a4830c9a32a983cda7db98fe71"
+             when "darwin-10.12-arm64" then "a406b1221216fad158c62d96a43f574b5a08dbd964e65fa5ed0b927a1459018f"
              else
                raise "forgente: Unsupported system #{os}-#{arch}"
              end
